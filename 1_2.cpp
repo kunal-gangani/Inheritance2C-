@@ -28,12 +28,12 @@ class TakeVal2 : public VarInit{
 class GetSum : public TakeVal, public TakeVal2{
 	public:
 		void Sum(){
-			cout<<"The Sum of "<<a<<" "<<b<<" "<<c<<" & "<<d<<" is "<<a+b+c+d<<endl; 
+			cout<<"The Sum of "<<TakeVal::a<<" "<<TakeVal::b<<" "<<TakeVal2::c<<" & "<<TakeVal::d<<" is "<<TakeVal::a+TakeVal::b+TakeVal2::c+TakeVal2::d<<endl; 
 		}
 };
 int main(){
 	GetSum g;
 	g.TakeInput1();
 	g.TakeInput2();
-	g.SetSum();	
+	g.Sum();	
 }
